@@ -1,3 +1,4 @@
+import 'package:dirty_code/src/features/dirty_screen_9/presentation/screen9.dart';
 import 'package:flutter/material.dart';
 
 class DirtyScreenNine extends StatelessWidget {
@@ -12,54 +13,10 @@ class DirtyScreenNine extends StatelessWidget {
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
-            Padding(
-              padding: EdgeInsets.all(16.0),
-              child: Row(
-                children: [
-                  Text('4', style: TextStyle(fontSize: 24)),
-                  Text(' + ', style: TextStyle(fontSize: 24)),
-                  Text('5', style: TextStyle(fontSize: 24)),
-                  Text(' = ', style: TextStyle(fontSize: 24)),
-                  Text('9', style: TextStyle(fontSize: 24)),
-                ],
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.all(16.0),
-              child: Row(
-                children: [
-                  Text('3', style: TextStyle(fontSize: 24)),
-                  Text(' + ', style: TextStyle(fontSize: 24)),
-                  Text('3', style: TextStyle(fontSize: 24)),
-                  Text(' = ', style: TextStyle(fontSize: 24)),
-                  Text('6', style: TextStyle(fontSize: 24)),
-                ],
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.all(16.0),
-              child: Row(
-                children: [
-                  Text('2', style: TextStyle(fontSize: 24)),
-                  Text(' + ', style: TextStyle(fontSize: 24)),
-                  Text('8', style: TextStyle(fontSize: 24)),
-                  Text(' = ', style: TextStyle(fontSize: 24)),
-                  Text('10', style: TextStyle(fontSize: 24)),
-                ],
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.all(16.0),
-              child: Row(
-                children: [
-                  Text('7', style: TextStyle(fontSize: 24)),
-                  Text(' + ', style: TextStyle(fontSize: 24)),
-                  Text('1', style: TextStyle(fontSize: 24)),
-                  Text(' = ', style: TextStyle(fontSize: 24)),
-                  Text('8', style: TextStyle(fontSize: 24)),
-                ],
-              ),
-            ),
+            Screen9(numberA: 4, numberB: 5),
+            Screen9(numberA: 3, numberB: 3),
+            Screen9(numberA: 2, numberB: 8),
+            Screen9(numberA: 7, numberB: 1),
           ],
         ),
       ),
