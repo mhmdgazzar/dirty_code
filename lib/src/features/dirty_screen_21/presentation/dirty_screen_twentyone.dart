@@ -1,3 +1,4 @@
+import 'package:dirty_code/src/features/dirty_screen_21/presentation/screen21.dart';
 import 'package:flutter/material.dart';
 
 class DirtyScreenTwentyOne extends StatelessWidget {
@@ -9,101 +10,29 @@ class DirtyScreenTwentyOne extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Dirty Screen #21"),
       ),
-      body: SingleChildScrollView(
+      body: const SingleChildScrollView(
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Transform.rotate(
-                angle: 3.14159, // Rotate 180 degrees
-                child: const SizedBox(
-                  width: 300,
-                  child: Card(
-                    color: Colors.cyan,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Column(
-                        children: [
-                          Text('5 + 3 = 8', style: TextStyle(fontSize: 24)),
-                          SizedBox(height: 8),
-                          Text('Simple Addition',
-                              style: TextStyle(fontSize: 16)),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Transform.rotate(
-                angle: 3.14159, // Rotate 180 degrees
-                child: const SizedBox(
-                  width: 300,
-                  child: Card(
-                    color: Colors.cyan,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Column(
-                        children: [
-                          Text('10 - 2 = 8', style: TextStyle(fontSize: 24)),
-                          SizedBox(height: 8),
-                          Text('Simple Subtraction',
-                              style: TextStyle(fontSize: 16)),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Transform.rotate(
-                angle: 3.14159, // Rotate 180 degrees
-                child: const SizedBox(
-                  width: 300,
-                  child: Card(
-                    color: Colors.cyan,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Column(
-                        children: [
-                          Text('4 * 2 = 8', style: TextStyle(fontSize: 24)),
-                          SizedBox(height: 8),
-                          Text('Simple Multiplication',
-                              style: TextStyle(fontSize: 16)),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Transform.rotate(
-                angle: 3.14159, // Rotate 180 degrees
-                child: const SizedBox(
-                  width: 300,
-                  child: Card(
-                    color: Colors.cyan,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Column(
-                        children: [
-                          Text('16 / 2 = 8', style: TextStyle(fontSize: 24)),
-                          SizedBox(height: 8),
-                          Text('Simple Division',
-                              style: TextStyle(fontSize: 16)),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
+            Screen21(
+                numberA: 5,
+                numberB: 3,
+                subText: 'Simple Addition',
+                operator: '+'),
+            Screen21(
+                numberA: 10,
+                numberB: 2,
+                subText: 'Simple Substraction',
+                operator: '-'),
+            Screen21(
+                numberA: 4,
+                numberB: 2,
+                subText: 'Simple Multiplication',
+                operator: '*'),
+            Screen21(
+                numberA: 12,
+                numberB: 2,
+                subText: 'Simple Division',
+                operator: '/')
           ],
         ),
       ),
