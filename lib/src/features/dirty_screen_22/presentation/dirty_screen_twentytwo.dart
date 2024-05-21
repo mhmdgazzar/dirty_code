@@ -1,3 +1,4 @@
+import 'package:dirty_code/src/features/dirty_screen_22/presentation/screen22.dart';
 import 'package:flutter/material.dart';
 
 class DirtyScreenTwentyTwo extends StatelessWidget {
@@ -9,60 +10,15 @@ class DirtyScreenTwentyTwo extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Dirty Screen #22"),
       ),
-      body: SingleChildScrollView(
+      body: const SingleChildScrollView(
         child: Column(
           children: [
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.lightBlueAccent,
-                borderRadius: BorderRadius.circular(10),
-              ),
-              margin: const EdgeInsets.all(16),
-              padding: const EdgeInsets.all(16),
-              child: Column(
-                children: [
-                  const Text('Volume', style: TextStyle(fontSize: 20)),
-                  Slider(
-                    value: 0.5,
-                    onChanged: (value) {},
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.greenAccent,
-                borderRadius: BorderRadius.circular(10),
-              ),
-              margin: const EdgeInsets.all(16),
-              padding: const EdgeInsets.all(16),
-              child: Column(
-                children: [
-                  const Text('Brightness', style: TextStyle(fontSize: 20)),
-                  Slider(
-                    value: 0.7,
-                    onChanged: (value) {},
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.orangeAccent,
-                borderRadius: BorderRadius.circular(10),
-              ),
-              margin: const EdgeInsets.all(16),
-              padding: const EdgeInsets.all(16),
-              child: Column(
-                children: [
-                  const Text('Contrast', style: TextStyle(fontSize: 20)),
-                  Slider(
-                    value: 0.3,
-                    onChanged: (value) {},
-                  ),
-                ],
-              ),
-            ),
+            Screen22(
+                color: Colors.lightBlueAccent, title: 'Volume', value: 0.5),
+            Screen22(
+                color: Colors.greenAccent, title: 'Brightness', value: 0.7),
+            Screen22(
+                color: Colors.orangeAccent, title: 'Contrast', value: 0.35),
           ],
         ),
       ),
