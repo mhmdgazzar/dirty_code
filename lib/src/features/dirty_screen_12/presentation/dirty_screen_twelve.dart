@@ -1,3 +1,4 @@
+import 'package:dirty_code/src/features/dirty_screen_12/presentation/screen12.dart';
 import 'package:flutter/material.dart';
 
 class DirtyScreenTwelve extends StatelessWidget {
@@ -8,90 +9,14 @@ class DirtyScreenTwelve extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Dirty Screen #12"),
       ),
-      body: SingleChildScrollView(
+      body: const SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                color: Colors.lightBlueAccent,
-              ),
-              margin: const EdgeInsets.all(4),
-              padding: const EdgeInsets.all(16.0),
-              child: const Column(
-                children: [
-                  Text(
-                    'Döner',
-                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(height: 8),
-                  Text('Price: 10 €', style: TextStyle(fontSize: 18)),
-                  SizedBox(height: 8),
-                  Text('Essen'),
-                ],
-              ),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                color: Colors.lightGreenAccent,
-              ),
-              margin: const EdgeInsets.all(4),
-              padding: const EdgeInsets.all(16.0),
-              child: const Column(
-                children: [
-                  Text(
-                    'Yufka',
-                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(height: 8),
-                  Text('Price: 20 €', style: TextStyle(fontSize: 18)),
-                  SizedBox(height: 8),
-                  Text('Essen'),
-                ],
-              ),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                color: Colors.purpleAccent,
-              ),
-              margin: const EdgeInsets.all(4),
-              padding: const EdgeInsets.all(16.0),
-              child: const Column(
-                children: [
-                  Text(
-                    'Pizza',
-                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(height: 8),
-                  Text('Price: 30 €', style: TextStyle(fontSize: 18)),
-                  SizedBox(height: 8),
-                  Text('Essen'),
-                ],
-              ),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                color: Colors.pinkAccent,
-              ),
-              margin: const EdgeInsets.all(4),
-              padding: const EdgeInsets.all(16.0),
-              child: const Column(
-                children: [
-                  Text(
-                    'Sushi',
-                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(height: 8),
-                  Text('Price: 40 €', style: TextStyle(fontSize: 18)),
-                  SizedBox(height: 8),
-                  Text('Essen'),
-                ],
-              ),
-            ),
+            Screen12(title: "Döner", price: 10, color: Colors.lightBlueAccent),
+            Screen12(title: "Yufka", price: 20, color: Colors.lightGreenAccent),
+            Screen12(title: "Pizza", price: 30, color: Colors.purpleAccent),
+            Screen12(title: "Sushi", price: 40, color: Colors.pinkAccent),
           ],
         ),
       ),
