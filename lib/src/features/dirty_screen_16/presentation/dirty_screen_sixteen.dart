@@ -1,3 +1,4 @@
+import 'package:dirty_code/src/features/dirty_screen_16/presentation/screen16.dart';
 import 'package:flutter/material.dart';
 
 class DirtyScreenSixteen extends StatelessWidget {
@@ -8,46 +9,26 @@ class DirtyScreenSixteen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Dirty Screen #16"),
       ),
-      body: SingleChildScrollView(
+      body: const SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
-            ListTile(
-              leading: const CircleAvatar(
-                backgroundImage: NetworkImage('https://picsum.photos/100'),
-              ),
-              title: const Text('Alice Johnson'),
-              subtitle: const Text('Project Manager'),
-              trailing: const Icon(Icons.arrow_forward),
-              onTap: () {},
-            ),
-            ListTile(
-              leading: const CircleAvatar(
-                backgroundImage: NetworkImage('https://picsum.photos/101'),
-              ),
-              title: const Text('Bob Smith'),
-              subtitle: const Text('Developer'),
-              trailing: const Icon(Icons.arrow_forward),
-              onTap: () {},
-            ),
-            ListTile(
-              leading: const CircleAvatar(
-                backgroundImage: NetworkImage('https://picsum.photos/102'),
-              ),
-              title: const Text('Catherine Lee'),
-              subtitle: const Text('Designer'),
-              trailing: const Icon(Icons.arrow_forward),
-              onTap: () {},
-            ),
-            ListTile(
-              leading: const CircleAvatar(
-                backgroundImage: NetworkImage('https://picsum.photos/103'),
-              ),
-              title: const Text('David Wilson'),
-              subtitle: const Text('Product Owner'),
-              trailing: const Icon(Icons.arrow_forward),
-              onTap: () {},
-            ),
+            Screen16(
+                name: 'Alice Johnson',
+                position: 'Project Manager',
+                bildURL: 'https://picsum.photos/100'),
+            Screen16(
+                name: 'Bob Smith',
+                position: 'Developer',
+                bildURL: 'https://picsum.photos/101'),
+            Screen16(
+                name: 'Catherine Lee',
+                position: 'Designer',
+                bildURL: 'https://picsum.photos/102'),
+            Screen16(
+                name: 'David Wilson',
+                position: 'Product Owner',
+                bildURL: 'https://picsum.photos/103'),
           ],
         ),
       ),
