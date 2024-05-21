@@ -35,7 +35,7 @@ class OverviewScreen extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: ListView(children: const [
+        child: ListView(scrollDirection: Axis.vertical, children: const [
           DirtyNavButton(destination: DirtyScreenOne(), number: 1),
           SizedBox(height: 16),
           DirtyNavButton(destination: DirtyScreenTwo(), number: 2),

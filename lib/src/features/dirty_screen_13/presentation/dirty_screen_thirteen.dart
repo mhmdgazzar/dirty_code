@@ -1,3 +1,4 @@
+import 'package:dirty_code/src/features/dirty_screen_13/presentation/screen13.dart';
 import 'package:flutter/material.dart';
 
 class DirtyScreenThirteen extends StatelessWidget {
@@ -12,70 +13,18 @@ class DirtyScreenThirteen extends StatelessWidget {
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
-            Padding(
-              padding: EdgeInsets.all(16.0),
-              child: Row(
-                children: [
-                  CircleAvatar(
-                    backgroundImage: NetworkImage(
-                        'https://randomuser.me/api/portraits/men/1.jpg'),
-                  ),
-                  SizedBox(width: 8),
-                  Text(
-                    'John Doe',
-                    style: TextStyle(fontSize: 20),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.all(16.0),
-              child: Row(
-                children: [
-                  CircleAvatar(
-                    backgroundImage: NetworkImage(
-                        'https://randomuser.me/api/portraits/women/2.jpg'),
-                  ),
-                  SizedBox(width: 8),
-                  Text(
-                    'Jane Smith',
-                    style: TextStyle(fontSize: 20),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.all(16.0),
-              child: Row(
-                children: [
-                  CircleAvatar(
-                    backgroundImage: NetworkImage(
-                        'https://randomuser.me/api/portraits/men/3.jpg'),
-                  ),
-                  SizedBox(width: 8),
-                  Text(
-                    'Alex Johnson',
-                    style: TextStyle(fontSize: 20),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.all(16.0),
-              child: Row(
-                children: [
-                  CircleAvatar(
-                    backgroundImage: NetworkImage(
-                        'https://randomuser.me/api/portraits/women/4.jpg'),
-                  ),
-                  SizedBox(width: 8),
-                  Text(
-                    'Emma Brown',
-                    style: TextStyle(fontSize: 20),
-                  ),
-                ],
-              ),
-            ),
+            Screen13(
+                bildURL: "https://randomuser.me/api/portraits/men/1.jpg",
+                name: "John Doe"),
+            Screen13(
+                bildURL: "https://randomuser.me/api/portraits/women/2.jpg",
+                name: "Jane Smith"),
+            Screen13(
+                bildURL: "https://randomuser.me/api/portraits/men/3.jpg",
+                name: "Alex Johnson"),
+            Screen13(
+                bildURL: "https://randomuser.me/api/portraits/women/4.jpg",
+                name: "Emma Brown"),
           ],
         ),
       ),
